@@ -7,7 +7,8 @@
 
 ## 📢 Introduction
 
-This project is a simple React NextJS application using the NextJS app router for handling meeting room bookings.
+This project is a simple React NextJS application using the NextJS app router for
+handling meeting room bookings.
 
 ## 🧭 Getting Started
 
@@ -28,6 +29,7 @@ Before running the NextJS Application locally install dependencies and NodeJS ve
 ```bash
 nvm use
 pnpm i
+cp .env.development .env.local
 ```
 
 To run the Application locally use the `pnpm dev` command then open [http://localhost:3000](http://localhost:3000).
