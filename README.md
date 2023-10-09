@@ -10,6 +10,17 @@
 This project is a simple React NextJS application using the NextJS app router for
 handling meeting room bookings.
 
+## Backlog
+
+Given more time the following items could be actioned:-
+
+- Improve code coverage (mocking api calls) and testing utils
+- Error boundaries and react suspense for data fetching
+- E2E tests (playwright)
+- Storybook deployments
+- Integration tests
+- Make booking against user IDs
+
 ## 🧭 Getting Started
 
 ### Prerequisites

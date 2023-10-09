@@ -1,6 +1,10 @@
 import { RoomsList } from '../..';
 
-export function RoomsPage() {
+interface RoomsPageProps {
+  data: RoomBookingAPI.Rooms;
+}
+
+export function RoomsPage({ data }: RoomsPageProps) {
   return (
     <main>
       <div className="container">
@@ -9,7 +13,7 @@ export function RoomsPage() {
           Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum dolor
           ultricies donec risus sodales. Tempus quis et.
         </p>
-        <RoomsList />
+        <RoomsList initialData={data} />
       </div>
     </main>
   );
