@@ -1,6 +1,11 @@
-/* naming convention http://chir.ag/projects/name-that-color (apart from the colors
+@layer colors {
+  /* naming convention http://chir.ag/projects/name-that-color (apart from the colors
 that have their names defined in the design system) */
-:root {
-  --color-black: #000;
-  --color-white: #fff;
+  :root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-mine-shaft: #222;
+    --color-dusty-gray: #9a9a9a;
+    --color-flirt: #9f0086;
+  }
 }

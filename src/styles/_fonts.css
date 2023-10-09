@@ -1,18 +1,30 @@
-/* @NOTE - fonts loaded in _document.tsx */
-:root {
-  --font-primary: 'PP Supply Sans', 'Helvetica', 'Arial', sans-serif;
-  --font-secondary: 'Inter', 'Helvetica', 'Arial', sans-serif;
-}
+@layer fonts {
+  :root {
+    --font-primary: 'Helvetica', 'Arial', sans-serif;
+  }
 
-html {
-  font-family: var(--font-primary);
-  font-size: 62.5%;
-}
+  html {
+    font-family: var(--font-primary);
+    font-size: 62.5%;
+  }
 
-*,
-*::before,
-*::after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizespeed;
+  *,
+  *::before,
+  *::after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizespeed;
+  }
+
+  h1 {
+    color: var(--color-mine-shaft);
+    font: 400 3.6rem / normal var(--font-primary);
+    margin-bottom: 0;
+  }
+
+  p {
+    color: var(--color-dusty-gray);
+    font: 400 2rem/2.8rem var(--font-primary);
+    margin-bottom: 39px;
+  }
 }
