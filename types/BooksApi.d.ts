@@ -1,6 +1,6 @@
 declare namespace RoomBookingAPI {
   export interface Room {
-    id: number;
+    id: string;
     createdAt: string;
     name: string;
     spots: number;
