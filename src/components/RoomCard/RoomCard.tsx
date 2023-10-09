@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import tokens from '../../../tokens/breakpoints.json';
 import styles from './RoomCard.module.css';
+import { useRoomMutation } from '../../hooks';
 
 export const TEST_IDS = {
   button: 'RoomCard:Button',
@@ -10,16 +11,31 @@ export const TEST_IDS = {
 
 type RoomCardProps = RoomBookingAPI.Room;
 
-export function RoomCard({ name, spots, thumbnail }: RoomCardProps) {
-  const [booked, setBooked] = useState(false);
+export function RoomCard({
+  id,
+  name,
+  spots,
+  thumbnail,
+  isBooked,
+}: RoomCardProps) {
+  const mutation = useRoomMutation({ id, name, spots, thumbnail });
   const onBookRoom = () => {
-    setBooked(!booked);
-  }; // @TODO
+    mutation.mutate({
+      id,
+      isBooked: !isBooked,
+    });
+  };
 
   return (
     <div className={styles.RoomCard}>
       <div className={styles['RoomCard__thumbnail-wrapper']}>
-        <Image src={thumbnail} alt={name} fill={true} objectFit="cover" />
+        <Image
+          src={thumbnail}
+          alt={name}
+          fill
+          priority
+          sizes={`(max-width: ${tokens.sm}px) 100vw, (max-width: ${tokens.md}px) 50vw, (max-width: ${tokens.lg}px) 33vw, 25vw`}
+        />
       </div>
       <div className={styles.RoomCard__content}>
         <div className={styles.RoomCard__name}>{name}</div>
@@ -30,8 +46,9 @@ export function RoomCard({ name, spots, thumbnail }: RoomCardProps) {
             className={styles.RoomCard__button}
             onClick={onBookRoom}
             data-testid={TEST_IDS.button}
+            disabled={mutation.status === 'loading'}
           >
-            {booked ? 'Un-book!' : 'Book!'}
+            {isBooked ? 'Un-book!' : 'Book!'}
           </button>
         </div>
       </div>

@@ -5,6 +5,7 @@ declare namespace RoomBookingAPI {
     name: string;
     spots: number;
     thumbnail: string;
+    isBooked: boolean;
   }
 
   export type Rooms = Room[];
