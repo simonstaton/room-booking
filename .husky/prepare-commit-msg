@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if ps -o args= $PPID | grep -E -q ' --amend| -a | -a$ | --no-verify| -n | -n$' ; then
+  exit 0
+fi
+
+exec < /dev/tty && npx cz --hook || true

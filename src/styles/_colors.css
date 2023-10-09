@@ -1,0 +1,6 @@
+/* naming convention http://chir.ag/projects/name-that-color (apart from the colors
+that have their names defined in the design system) */
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+}

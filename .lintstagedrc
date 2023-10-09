@@ -1,0 +1,6 @@
+{
+  "**/*.+(js|jsx|ts|tsx)": ["eslint"],
+  "**/*.{js,jsx,ts,tsx,md,mdx,json,yaml,yml}": ["prettier"],
+  "**/*.css": ["prettier"],
+  "**/*.md": ["markdownlint"]
+}

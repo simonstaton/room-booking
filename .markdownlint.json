@@ -1,0 +1,15 @@
+{
+  "default": true,
+  "whitespace": false,
+  "MD013": {
+    "line_length": 80,
+    "tables": false
+  },
+  "ul-start-left": false,
+  "ul-indent": false,
+  "no-inline-html": false,
+  "no-bare-urls": false,
+  "fenced-code-language": true,
+  "first-line-h1": false,
+  "no-emphasis-as-heading": false
+}
